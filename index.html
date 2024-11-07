@@ -3,118 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure Travel Club</title>
-    <link rel="stylesheet" href="travelClub.css">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="createAccountForm.css">
 </head>
 <body>
     <div class="container">
+        <div class="title">
+            <h1>Create Account</h1>
+            <p>Fill in the details to get started</p>
+        </div>
+
         <form>
-            <div class="title">
-                <h1>Adventure Travel Club</h1>
-                <p>Begin your journey with fellow adventurers</p>
-            </div>
-        
-            <div class="qcontainer">
-                <h2>Personal Information</h2>
-                <hr>
-                <div class="name">
-                    <div class="fname">
-                        <label for="fname">First Name</label>
-                        <br>
-                        <input class="question" type="text" id="fname" name="fname" required>
-                    </div>
-        
-                    <div class="lname">
-                        <label for="lname">Last Name</label>
-                        <br>
-                        <input class="question" type="text" itemref="lname" name="lname" required>
-                    </div>
-                </div>
-            
-                <div class="email">
-                    <label for="email">Email Address</label>
-                    <br>
-                    <input class="question" type="email" id="email" name="email" required>
-                </div>
-    
-                <div class="birthday">
-                    <label for="birthday">Date of Birth</label>
-                    <br>
-                    <input class="question" type="date" id="birthday" name="birthday" required>
-                </div>
+            <div class="name">
+                <h4>Full Name <span style="color: #ad7b7b;">*</span></h4>
+                <input class="question" type="text" id="name" name="name" placeholder="John Doe" required>
             </div>
             
-            <div class="qcontainer">
-                <h2>Adventure Preferences</h2>
-                <hr>
-                
-                <div class="experience">
-                    <label for="experience">Experience Level</label>
-                    <select class="question" id="experience" name="experience" required>
-                        <option value="">Select your experience level</option>
-                        <option value="be">Beginner</option>
-                        <option value="in">Intermediate</option>
-                        <option value="ad">Advanced</option>
-                        <option value="ex">Expert</option>
-                    </select>
-                </div>
-    
-                <div class="activities">
-                    <label for="activities">Preferred Activities</label><br>
-    
-                    <input type="checkbox" id="hiking" name="activities" value="hiking">
-                    <label for="hiking">Hiking</label><br>
-    
-                    <input type="checkbox" id="rock-climbing" name="activities" value="rock-climbing">
-                    <label for="rock-climbing">Rock Climbing</label><br>
-    
-                    <input type="checkbox" id="kayaking" name="activities" value="kayaking">
-                    <label for="kayaking">Kayaking</label><br>
-    
-                    <input type="checkbox" id="scuba-diving" name="activities" value="scuba-diving">
-                    <label for="scuba-diving">Scuba Diving</label>
-                </div>
-    
-                <div class="duration">
-                    <label for="duration">Preffered Trip Duration</label><br>
-    
-                    <input type="radio" id="weekend" name="duration" value="weekend" required>
-                    <label for="weekend">Weekend Trips (2-3 days)</label><br>
-    
-                    <input type="radio" id="week" name="duration" value="week" required>
-                    <label for="week">Week-long Adventures (5-7 days)</label><br>
-    
-                    <input type="radio" id="extended" name="duration" value="extended" required>
-                    <label for="extended">Extended Expeditions (2+ weeks)</label>
-                </div>
+            <div class="email">
+                <h4>Email Address <span style="color: #ad7b7b;">*</span></h4>
+                <input class="question" type="email" id="email" name="email" placeholder="you@example.com" required>
             </div>
     
-            <div class="qcontainer">
-                <h2>Additional Information</h2>
-                <hr>
-    
-                <div class="fitness">
-                    <label for="fitness">Fitness Level (1-10)</label>
-                    <input class="question" type="range" min="1" max="10" id="fitness" name="duration" required>
-                </div>
-    
-                <div class="about">
-                    <label for="about">Tell us about yourself</label>
-                    <textarea class="question" id="about" name="about" rows="5" placeholder="Share your adventure experiences and what excites you about joing our club..."></textarea>
-                </div>
-    
-                <div class="photo">
-                    <label for="photo">Profile Photo</label>
-                    <input class="question" type="file" id="photo" name="photo" accept=".png, .jpeg, .webp">
-                </div>
+            <div class="password">
+                <h4>Password <span style="color: #ad7b7b;">*</span></h4>
+                <input class="question" type="password" id="password" name="password" minlength="6" required>
+                <p>Must be at least 8 characters long</p>
             </div>
     
-            <div class="terms">
-                <input type="checkbox" id="terms" name="terms" value="terms" required>
-                <label for="terms">I agree to the Terms and Conditions and Privacy Policy</label>
+            <div class="role">
+                <h4>Role</h4>
+                <select class="question" id="role" name="role">
+                    <option value="">Select a role</option>
+                    <option value="1">Role 1</option>
+                    <option value="2">Role 2</option>
+                    <option value="2">Role 3</option>
+                </select>
             </div>
-            
-            <button type="submit">Submit Registration</button>
+    
+            <div class="bio">
+                <h4>Bio</h4>
+                <textarea class="question" id="bio" name="bio" rows="4" placeholder="Tell us about yourself "></textarea>
+                <p>Keep it short and sweet</p>
+            </div>
+    
+            <div class="terms normal">
+            <input type="checkbox" id="terms" name="term" required>
+            <label for="terms">I agree to the Terms and Conditions <span style="color: #ad7b7b;">*</span></label>
+            </div>
+    
+            <div class="submit">
+            <button>Create Account</button>
+            </div>
         </form>
     </div>
 </body>
